@@ -15,12 +15,12 @@ const store = createStore(
     applyMiddleware(thunk)
 );
 
-// Hydrate the authToken from localStorage if it exist
-const authToken = loadAuthToken();
-if (authToken) {
-    const token = authToken;
-    store.dispatch(setAuthToken(token));
-    store.dispatch(refreshAuthToken());
-}
+// // Hydrate the authToken from localStorage if it exist
+// const authToken = loadAuthToken();
+// if (authToken) {
+//     const token = authToken;
+//     store.dispatch(setAuthToken(token));
+//     store.dispatch(refreshAuthToken());
+// }
 
 export default store;
